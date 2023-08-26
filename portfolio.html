@@ -46,6 +46,21 @@
 			max-width: 100%;
             max-height: 100%;
         }
+		.responsive-iframe {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio (9 / 16 = 0.5625 or 56.25%) */
+        height: 0;
+        overflow: hidden;
+    }
+
+    .responsive-iframe iframe {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
 		</style>
 	</head>
 	<body class="is-preload">
@@ -74,10 +89,11 @@
 									<header class="main">
 										<h1>남겨둘 이야기</h1>
 									</header>
-
-									<span class="image main"><img src="images/portfolio_cover.png" alt="" /></span>
+									
+									
 									<div>
 										<hr class="major" />
+										<span class="image right"><img src="images/portfolio_cover.png" width="50%" height="50%" alt="" /></span>
 										<h2>자기소개</h2>
 										<p>Unity Certified User: Artist</p>
 										<p>nVIDIA DLI Certificate</p>
@@ -93,14 +109,15 @@
 										<h2>게임 프로젝트</h2>
 										<p>게임잼에서 제작한 프로젝트, PBL강의를 통한 프로젝트, 개인 프로젝트, 학부생 팀 프로젝트 등</p>
 										<a href="https://yogame.itch.io/" class="custom-button" >
-											<img src="/images/game.png" alt="" class="custom-button img" width=100px; height=100px>
+											<img src="/images/game.png" alt="" class="image" width=100px; height=100px>
 											<!-- Visit my itch.io -->
 										</a>
 										<hr class="major" />
 										<h2>게임 프로젝트 영상</h2>
 										<p>게임 프로젝트 결과, 과제물, 소개영상 등</p>
-										<iframe width="800"  height="600" src="https://www.youtube.com/embed/videoseries?list=PLuwAjjKw896rR_KhKBRRqLoJf8Cbnk9Y5&si=m2Agd9g8s9nKMiLg" frameborder="0" allowfullscreen>
-									</iframe>
+										<div class="responsive-iframe">
+											<iframe src="https://www.youtube.com/embed/videoseries?list=PLuwAjjKw896rR_KhKBRRqLoJf8Cbnk9Y5&si=m2Agd9g8s9nKMiLg" frameborder="0" allowfullscreen></iframe>
+										</div>
 									</div>
 								</section>
 
