@@ -1,0 +1,759 @@
+<h1 id="-">매화검수 : 최재영</h1>
+<h2 id="-">목차</h2>
+<ol>
+<li><p><a href="#컨셉">컨셉</a></p>
+<ul>
+<li><a href="#메인-컨셉">메인 컨셉</a></li>
+<li><a href="#서브-컨셉-1">서브 컨셉 1</a></li>
+<li><a href="#서브-컨셉-2">서브 컨셉 2</a></li>
+<li><a href="#서브-컨셉-3">서브 컨셉 3</a></li>
+<li><a href="#서브-컨셉-4">서브 컨셉 4</a></li>
+</ul>
+</li>
+<li><p><a href="#관련-이미지-&amp;-동영상">관련 이미지 &amp; 동영상</a></p>
+</li>
+<li><p><a href="#대표-이미지">대표 이미지</a></p>
+</li>
+<li><p><a href="#컨셉-&amp;-대표이미지-기반-작품묘사">컨셉 &amp; 대표이미지 기반 작품묘사</a></p>
+<ul>
+<li><a href="#대표이미지-기반">대표이미지 기반</a></li>
+<li><a href="#컨셉-기반">컨셉 기반</a></li>
+</ul>
+</li>
+<li><p><a href="#매화검수-구성-요소">매화검수 구성 요소</a></p>
+<ul>
+<li><a href="#1-메커니즘">1. 메커니즘</a></li>
+<li><a href="#2-이야기">2. 이야기</a></li>
+<li><a href="#3-미적요소">3. 미적요소</a></li>
+<li><a href="#4-기술">4. 기술</a></li>
+</ul>
+</li>
+<li><p><a href="#게임-시스템-디자인">게임 시스템 디자인</a></p>
+</li>
+<li><p><a href="#요구사항-흐름도">개발 요구사항 &amp; 흐름도</a></p>
+<ul>
+<li><a href="#요구사항">요구사항</a></li>
+<li><a href="#시간별흐름도">시간별 흐름도 flowchart</a></li>
+<li><a href="#키보드흐름도">키보드 이벤트에 대한 흐름도</a></li>
+<li><a href="#용어정리">용어정리</a></li>
+</ul>
+</li>
+<li><a href="#스토리보드">스토리보드</a></li>
+<li><a href="#문서">문서</a><ul>
+<li><a href="#게임-시스템-디자인-문서">게임 시스템 디자인</a></li>
+</ul>
+</li>
+</ol>
+<h2 id="-">컨셉</h2>
+<h3 id="-">메인 컨셉:</h3>
+<ul>
+<li>타격감 :
+게임을 하면 플레이어는 자신의 입력에 따른 게임의 피드백(반응)을 기대한다.<br>
+자신이 특정 입력을 했을 때, 게임에서 여러가지 방법으로 출력을 제공하는데 이 출력이 현실적임을 기대하기도 하고, 상황에 따라서는 과장되거나 말이 안되는 방법일때 더 흥미롭게 받아들일 수 있다.<br>
+이 타격감을 극대화하여 플레이어가 게임에 몰입하고, 높은 만족도를 가질 수 있도록 함.<br>
+유저의 입력에 따른 정확한 애니메이션 출력, 실제로 동작이 일어나는 시간에 맞는 사운드와 이펙트등 현실적인 기반에 과장된 효과를 추가하여 유저로 하여금 타격감을 느낄 수 있도록 함</li>
+</ul>
+<h3 id="-1-">서브 컨셉 1:</h3>
+<ul>
+<li>긴장감 : 콘텐츠적으로 공백을 줄이지만 너무 빽빽하지 않도록해 적당한 긴장감을 유지시키고, 너무 많은 피로도를 느끼지 않도록 설계(레벨디자인)</li>
+</ul>
+<h3 id="-2-">서브 컨셉 2:</h3>
+<ul>
+<li>성취감 : 적들의 공격을 쉽게 클리어할 수 없도록 만들어 유저가 클리어하였을 때, 성취감을 느끼게함(QA)</li>
+</ul>
+<h3 id="-3-">서브 컨셉 3:</h3>
+<ul>
+<li>현실성 : 입력 및 상황에 맞는 정확한 애니메이션, 물리적으로 타격을 했을 때 타격, 상황에 맞는 소리 등 현실세계의 법칙등 현실성을 추가하여, 몰입할 수 있게 함(애니메이션, 물리효과, 소리 등)</li>
+</ul>
+<h3 id="-4-">서브 컨셉 4:</h3>
+<ul>
+<li>비현실성 : 현실에 없는 과장된 효과음, 파티클, 배경음악처럼 몰입을 도와주는 효과와 ui등 없으면 불편한 게임 시스템을 추가한다. (효과음, 이펙트, 배경음악, ui등)</li>
+</ul>
+<h2 id="-">관련 이미지 &amp; 동영상</h2>
+<ul>
+<li><p>이미지<br><img src="./img/관련이미지1.jpg">
+<img src="./img/관련이미지2.png"></p>
+</li>
+<li><p>동영상
+<a href="https://www.youtube.com/watch?app=desktop&amp;v=1MsHaxh5LxE"><img src="./img/관련이미지1.jpg" alt=""></a></p>
+</li>
+</ul>
+<h2 id="-">대표 이미지</h2>
+<p><img src="./img/대표이미지1.PNG" alt="그림">
+<img src="./img/대표이미지2.PNG" alt="그림">
+<img src="./img/대표이미지3.PNG" alt="그림"></p>
+<h2 id="-">컨셉 &amp; 대표이미지 기반 작품묘사</h2>
+<p>(UI) 몰입감, 현실성을 최대로 주지만, 게임하는데 불편하지 않도록, ui종류와 크기를 최소화하여 배치
+(시점) 3인칭 시점으로 캐릭터의 어깨 뒤에 카메라가 배치됨
+(전투) 적당한 수의 적을 배치해, 긴장감을 유지함. 전투의 난이도를 쉽지않게 만들어 성취감을 느끼게함.
+현실적인 애니메이션과 충돌처리를 통해 현실성을 느낄수 있다. 과장된 효과로 재미를 극대화시킴</p>
+<h2 id="-">매화검수 구성 요소</h2>
+<ul>
+<li>매화검을 쓰는 검객이 적을 베는 3인칭 액션RPG</li>
+</ul>
+<h3 id="1-">1. 메커니즘</h3>
+<p>[도전 과제]</p>
+<ol>
+<li>공격해오는 다양한 적들을 물리쳐라</li>
+<li>괴인들로부터 세상을 구해라</li>
+</ol>
+<p>[재미 요소]</p>
+<ol>
+<li>다양한 효과</li>
+<li>타격감</li>
+</ol>
+<h3 id="2-">2. 이야기</h3>
+<p>[만들게 된 배경]  </p>
+<ul>
+<li>요즘 무협을 배경으로 한 웹툰, 웹소설등이 나오며 무협 컨텐츠에 대한 수요</li>
+<li>특히 화산을 배경으로 한 컨텐츠에서 게임으로 만들면 더 재미있을 것 같다는 생각
+<img src="./img/기획의도1.png" alt="그림">
+<img src="./img/기획의도2.png" alt="그림"></li>
+</ul>
+<p>[참신함]</p>
+<ul>
+<li>기존 무협게임은 주로 40대가 넘는 사람들을 위한 장르와의 결합이었다면, 만들 게임은 더 젊은 사람들에게 어필할 수 있는 장르인 액션rpg와 결합함</li>
+</ul>
+<p>[카메라 관점]  </p>
+<ul>
+<li>3D 3인칭 시점</li>
+</ul>
+<p>[스토리]</p>
+<ul>
+<li>마교에서 돌림병을 퍼뜨려 사람들에게 폭력성을 증진시키고 이성을 잃게 하여 무림을 혼란에 빠지게 하고 마교에서 무림을 다스리려고 한다.
+<br>
+화산파를 포함한 높은산에 있는 세력들만 이 돌림병에 면역이었다. 사형제들과 화산의 대부분의 제자들은 무림의 평화를 가져오기 위해서 떠났다.
+<br>
+주인공은 폐관수련중이었고, 폐관수련을 종료한 주인공은 앞에 놓여진 봉서를 보게된다. 봉서에는 먼저 세상을 구하기 위해 떠날테니 너도 채비해서 얼른 오라는 글이 쓰여있었다.
+<br>
+화산파의 천재라고 불린 주인공은 이제 사람들을 되돌리고, 마교를 벌하기 위해 길을 나선다.
+<br>
+적: 돌림병에 걸린 일반인, 돌림병에 걸린 무림인, 마교인
+<br></li>
+</ul>
+<h3 id="3-">3. 미적요소</h3>
+<p>[디자인]</p>
+<ul>
+<li>무협 배경이므로 그 시대에 맞는 건물, 오브젝트, 복장, 적 에셋 사용
+<img src="./img/디자인이미지1.png">
+<img src="./img/디자인이미지2.png"></li>
+<li>UI 또한 시대 느낌이 나게 설정</li>
+</ul>
+<p>[컬러]  </p>
+<ul>
+<li>배경의 주 색은 실제로 세계가 위협에 빠진듯한 포스트 아포칼립스 또는 멸망 직전의 분위기의 조명색
+<img src="./img/컬러이미지.png" width="100%" height="100%"></li>
+<li>플레이어의 검술은 화려한 이펙트가 출력되도록 함</li>
+</ul>
+<p>[음향]<br>약간의 긴장감을 주는 음악을 크지 않은 소리로 틀고, 효과음은 크게 출력되도록 함.</p>
+<h3 id="4-">4. 기술</h3>
+<p>Unity 3D로 개발할 예정이며, 개발이 완료된 이후에는 웹 빌드하여 itch.io에 게시예정</p>
+<h2 id="-">게임 시스템 디자인</h2>
+<h3 id="1-">1. 게임  오브젝트  분해  (구성  요소  분석)</h3>
+<hr>
+<table>
+<thead>
+<tr>
+<th><strong>연번</strong></th>
+<th><strong>종류</strong></th>
+<th><strong>OBJ 이름</strong></th>
+<th><strong>Obj 영문명</strong></th>
+<th><strong>사용처</strong></th>
+<th><strong>오브젝트  이미지</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>플레이어</td>
+<td>주인공</td>
+<td>player</td>
+<td>공통</td>
+<td><img src="img/Aspose.Words.5f80b5a7-f03e-4ed9-9853-79b3868489fd.001.png" alt=""></td>
+</tr>
+<tr>
+<td>2</td>
+<td>적</td>
+<td>일반인</td>
+<td>e_Easy</td>
+<td>1,2  스테이지</td>
+<td><img src="img/Aspose.Words.5f80b5a7-f03e-4ed9-9853-79b3868489fd.002.png" alt=""></td>
+</tr>
+<tr>
+<td>3</td>
+<td>적</td>
+<td>무림인</td>
+<td>e_Normal</td>
+<td>2,3  스테이지</td>
+<td><img src="img/Aspose.Words.5f80b5a7-f03e-4ed9-9853-79b3868489fd.003.png" alt=""></td>
+</tr>
+<tr>
+<td>4</td>
+<td>적</td>
+<td>마교인</td>
+<td>e_Hard</td>
+<td>4  스테이지</td>
+<td><img src="img/Aspose.Words.5f80b5a7-f03e-4ed9-9853-79b3868489fd.004.png" alt=""></td>
+</tr>
+<tr>
+<td>5</td>
+<td>무기</td>
+<td>검</td>
+<td>sword</td>
+<td>공통</td>
+<td><img src="img/Aspose.Words.5f80b5a7-f03e-4ed9-9853-79b3868489fd.005.png" alt=""></td>
+</tr>
+<tr>
+<td>6</td>
+<td>아이템</td>
+<td>회복  물약</td>
+<td>potion</td>
+<td>공통</td>
+<td><img src="img/Aspose.Words.5f80b5a7-f03e-4ed9-9853-79b3868489fd.006.png" alt=""></td>
+</tr>
+<tr>
+<td>7</td>
+<td>ui</td>
+<td>내  체력</td>
+<td>p_HpUI</td>
+<td>공통</td>
+<td><img src="img/Aspose.Words.5f80b5a7-f03e-4ed9-9853-79b3868489fd.007.png" alt="ref1"></td>
+</tr>
+<tr>
+<td>8</td>
+<td>ui</td>
+<td>적  체력</td>
+<td>e_HpUI</td>
+<td>공통</td>
+<td><img src="img/Aspose.Words.5f80b5a7-f03e-4ed9-9853-79b3868489fd.007.png" alt="ref1"></td>
+</tr>
+<tr>
+<td>9</td>
+<td>ui</td>
+<td>적  이름</td>
+<td>e_NameUI</td>
+<td>공통</td>
+<td><img src="img/Aspose.Words.5f80b5a7-f03e-4ed9-9853-79b3868489fd.008.png" alt=""></td>
+</tr>
+<tr>
+<td>10</td>
+<td>ui</td>
+<td>회복 아이템  창</td>
+<td>potionUI</td>
+<td>공통</td>
+<td><img src="img/Aspose.Words.5f80b5a7-f03e-4ed9-9853-79b3868489fd.009.png" alt=""></td>
+</tr>
+<tr>
+<td>11</td>
+<td>상호작용  오브젝트</td>
+<td>포탈</td>
+<td>portal</td>
+<td>스테이지  이동</td>
+<td><img src="img/Aspose.Words.5f80b5a7-f03e-4ed9-9853-79b3868489fd.010.jpeg" alt=""></td>
+</tr>
+<tr>
+<td>12</td>
+<td>상호작용  오브젝트</td>
+<td>편지</td>
+<td>letter</td>
+<td>스토리  진행</td>
+<td><img src="img/Aspose.Words.5f80b5a7-f03e-4ed9-9853-79b3868489fd.011.png" alt=""></td>
+</tr>
+<tr>
+<td>13</td>
+<td>상호작용  오브젝트</td>
+<td>울타리</td>
+<td>fence</td>
+<td>파괴  가능한 벽</td>
+<td><img src="img/Aspose.Words.5f80b5a7-f03e-4ed9-9853-79b3868489fd.012.jpeg" alt=""></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="2-">2. 파라미터(속성)  뽑아  보기</h3>
+<p>1) 오브젝트  이름  :  player</p>
+<table>
+<thead>
+<tr>
+<th><strong>속성</strong></th>
+<th><strong>영문명칭</strong></th>
+<th><strong>설명</strong></th>
+<th><strong>비고</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>최대체력</td>
+<td>maxHp</td>
+<td>플레이어의  체력이  가질  수  있는  최대치</td>
+<td>-int</td>
+</tr>
+<tr>
+<td>현재체력</td>
+<td>hp</td>
+<td>플레이어의  체력</td>
+<td>-int</td>
+</tr>
+<tr>
+<td>공격력</td>
+<td>dmg</td>
+<td>플레이어가  적에게  입히는  데미지</td>
+<td>+int</td>
+</tr>
+<tr>
+<td>이동속도</td>
+<td>moveSpeed</td>
+<td>플레이어가  이동하는  속도</td>
+<td>-float</td>
+</tr>
+<tr>
+<td>포션  개수</td>
+<td>potionCount</td>
+<td>현재  사용가능한  포션  개수</td>
+<td>-int</td>
+</tr>
+<tr>
+<td>포션  개수  ui</td>
+<td>potionCountUI</td>
+<td>현재  사용가능한  포션  개수를  표시할  UI</td>
+<td>-Text</td>
+</tr>
+<tr>
+<td>상태</td>
+<td>state</td>
+<td>플레이어의  동작  상태  (기본,  쳐내기,  피격,  사망)</td>
+<td>+enum</td>
+</tr>
+<tr>
+<td>체력ui</td>
+<td>hpBar</td>
+<td>플레이어의  체력을  표시할  ui</td>
+<td>-Image</td>
+</tr>
+<tr>
+<td>기준위치</td>
+<td>spawnPoint</td>
+<td>부활시  플레이어를  생성할  위치</td>
+<td>Transform</td>
+</tr>
+<tr>
+<td>검  콜라이더</td>
+<td>weaponCollider</td>
+<td>무기의  콜라이더</td>
+<td>Collider</td>
+</tr>
+</tbody>
+</table>
+<p>2) 오브젝트  이름  :  e_Easy,  e_Normal,  e_Hard</p>
+<table>
+<thead>
+<tr>
+<th><strong>속성</strong></th>
+<th><strong>영문명칭</strong></th>
+<th><strong>설명</strong></th>
+<th><strong>비고</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>체력</td>
+<td>hp</td>
+<td>적의  체력</td>
+<td>int</td>
+</tr>
+<tr>
+<td>공격력</td>
+<td>dmg</td>
+<td>적이  플레이어에게  입히는  데미지</td>
+<td>int</td>
+</tr>
+<tr>
+<td>이동속도</td>
+<td>moveSpeed</td>
+<td>적이  이동하는  속도</td>
+<td>float</td>
+</tr>
+<tr>
+<td>이름</td>
+<td>name</td>
+<td>적의  이름</td>
+<td>int</td>
+</tr>
+<tr>
+<td>대상</td>
+<td>target</td>
+<td>이동할  대상  적이  범위  내에  들어왔을  시  적, 범위를  벗어났을  때는  기본위치</td>
+<td>Transform</td>
+</tr>
+<tr>
+<td>기준위치</td>
+<td>spawnPoint</td>
+<td>적을  생성할  위치,  적이  없을  때,  돌아갈  위치</td>
+<td>Transform</td>
+</tr>
+<tr>
+<td>체력ui</td>
+<td>hpBar</td>
+<td>적의  체력을  표시할  ui</td>
+<td>Image</td>
+</tr>
+<tr>
+<td>이름ui</td>
+<td>nameUI</td>
+<td>적의  이름을  표시할  ui</td>
+<td>Text</td>
+</tr>
+<tr>
+<td>무기  콜라이더</td>
+<td>weaponCollider</td>
+<td>무기의  콜라이더</td>
+<td>Collider</td>
+</tr>
+</tbody>
+</table>
+<p>3) 오브젝트  이름  :  portal</p>
+<table>
+<thead>
+<tr>
+<th><strong>속성</strong></th>
+<th><strong>영문명칭</strong></th>
+<th><strong>설명</strong></th>
+<th><strong>비고</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>출구포탈</td>
+<td>exit</td>
+<td>포탈에  충돌했을  때,  이동시켜줄  출구포탈  오브젝트</td>
+<td>gameObject</td>
+</tr>
+</tbody>
+</table>
+<p>4) 오브젝트  이름  :  letter</p>
+<table>
+<thead>
+<tr>
+<th><strong>속성</strong></th>
+<th><strong>영문명칭</strong></th>
+<th><strong>설명</strong></th>
+<th><strong>비고</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>편지내용</td>
+<td>letter</td>
+<td>편지에  표시될  내용</td>
+<td>string</td>
+</tr>
+<tr>
+<td>편지배경</td>
+<td>letterCanvas</td>
+<td>편지  ui에  표시될  캔버스</td>
+<td>gameObject</td>
+</tr>
+</tbody>
+</table>
+<p>5) 오브젝트  이름  :  potion</p>
+<table>
+<thead>
+<tr>
+<th><strong>속성</strong></th>
+<th><strong>영문명칭</strong></th>
+<th><strong>설명</strong></th>
+<th><strong>비고</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>포션이미지</td>
+<td>potionSprite</td>
+<td>포션ui에  표시될  이미지</td>
+<td>sprite</td>
+</tr>
+<tr>
+<td>포션회복량</td>
+<td>healAmount</td>
+<td>포션을  사용했을  때,  체력을  회복하는  정도(퍼센트  [0,1])</td>
+<td>float</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-">3. 행동  뽑아  보기</h3>
+<p>1) 오브젝트  이름  :  player</p>
+<table>
+<thead>
+<tr>
+<th><strong>행동</strong></th>
+<th><strong>영문명칭</strong></th>
+<th><strong>설명</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>이동</td>
+<td>Move</td>
+<td>wasd로  입력을  받아  이동한다. shift를  누르면  이동속도가  증가한다.</td>
+</tr>
+<tr>
+<td>공격</td>
+<td>Attack</td>
+<td>무기의  콜라이더를  켜고  애니메이션을  출력</td>
+</tr>
+<tr>
+<td>쳐내기</td>
+<td>Parry</td>
+<td>공격  쳐내기 플레이어가 쳐내기 기술을 사용해 쳐내기 애니메이션을 출력 0.3초  동안  <strong>쳐내기  상태</strong>가  됨<strong>쳐내기  상태</strong>에서  피격시:1. 플레이어의  피격  없음.2. 플레이어는  쳐내기  성공  애니메이션  출력3. 적은  공격  실패  애니메이션  출력4. 쳐내기  성공  이펙트,  사운드  출력쳐내기 기술을 사용했을 때,  쳐내기 애니메이션이 출력되는지 쳐내기 기술을 사용했을  때,  쳐내기 콜라이더가 생성되는지 쳐내기 기술  사용중일 때, 피격시 쳐내기 성공으로 이어지는지 쳐내기 기술  시간이 종료되었을 때, 쳐내기 콜라이더가 사라지는지 쳐내기 기술  시간이 종료되었을 때, 쳐내기 애니메이션이 종료되는지 쳐내기  효과가  종료되고  피격되었을  때는 기존의  피격효과와  동일한지  확인쳐내기 성공했을 때  이펙트,사운드 가  정상출력 되는지 확인 쳐내기 성공했을 때  플레이어의 hp가  감소되지 않는지 확인 쳐내기 성공했을 때  쳐내기 성공  애니메이션이 출력되는지 확인- 사운드는  배경음보다  크게(우선  순위가  높다)- 카운터  스킬  개념- 피격  시간은  Inspector에서  조절  가능- <strong>쳐내기 상태</strong>  0.3초  동안  애니메이션이 존재하고 이동  불가(0.3초  포함  X)- 이미  피격이  된  공격에  대해서는  쳐내기가  안  된다.- 재사용  대기  시간  없다.- 쳐내기는  스킬  1회당  공격  1회를  막는다.- 모든  피격  판정에  대해  발동한다.- 데미지  없이  막는  스킬- 투사체를  막아낼  시  사라진다. 투사체  발사자는  공격  실패  판정을  갖지  않는다.</td>
+</tr>
+<tr>
+<td>피격</td>
+<td>Hit(int  dmg)</td>
+<td>적의  공격에  충돌하였을  때  호출 플레이어의  hp를  적의  공격력만큼 감소시킨다.</td>
+</tr>
+<tr>
+<td>포션사용</td>
+<td>UsePotion()</td>
+<td>포션의  개수가  1개  이상이면,potion의  healAmount*maxHp만큼 체력을 더하고 potionCount의  개수를  1만큼  감소시키고. potionCountUI의  text를  업데이트한다.</td>
+</tr>
+<tr>
+<td>부활</td>
+<td>Revive()</td>
+<td>spawnPoint위치로  플레이어를  부활시키고, 상태를  기본상태로  전환한다.  부활  애니메이션 을  출력한다.</td>
+</tr>
+<tr>
+<td>사망</td>
+<td>Die()</td>
+<td>hp가  0이하가 되면  호출,  일정 시간  이후에 부활을 호출</td>
+</tr>
+</tbody>
+</table>
+<p>2) 오브젝트  이름  :  e_Easy,  e_Normal,  e_Hard</p>
+<table>
+<thead>
+<tr>
+<th><strong>행동</strong></th>
+<th><strong>영문명칭</strong></th>
+<th><strong>설명</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>대상  찾기</td>
+<td>FindEnemy()</td>
+<td>길이가  정해진  ray를  플레이어  방향으로  발사 한다.  이  ray에  플레이어가  맞으면  target에 플레이어가  들어간다.  없으면  spawnpoint와 일정거리내의  위치가  저장된다.</td>
+</tr>
+<tr>
+<td>이동</td>
+<td>Move (Transform target)</td>
+<td>target위치로  이동한다.</td>
+</tr>
+<tr>
+<td>공격</td>
+<td>Attack</td>
+<td>적이  공격사거리  안으로  들어오면,  대상을  바 라보고  공격애니메이션을  실행,  무기의  콜라이 더를  켜준다.  공격이  종료될  때  까지  이동과 회전이  불가능하다.</td>
+</tr>
+<tr>
+<td>피격</td>
+<td>Hit(int  dmg)</td>
+<td>플레이어의  공격에  충돌하였을  때  호출 자신의 hp를  플레이어의 공격력만큼 감소시킨다.</td>
+</tr>
+<tr>
+<td>사망</td>
+<td>Die()</td>
+<td>hp가  0이하가  되면 호출,  일정 시간  이후에 부활을 호출</td>
+</tr>
+<tr>
+<td>부활</td>
+<td>Revive()</td>
+<td>spawnPoint위치로  플레이어를  부활시키고, 상태를  기본상태로  전환한다.  부활  애니메이션 을  출력한다.</td>
+</tr>
+</tbody>
+</table>
+<p>3) 오브젝트  이름  :  portal</p>
+<table>
+<thead>
+<tr>
+<th><strong>행동</strong></th>
+<th><strong>영문명칭</strong></th>
+<th><strong>설명</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>포탈  이동</td>
+<td>OnCollisionEnter</td>
+<td>collision이  플레이어면,exit의  position으로  이동시킨다.</td>
+</tr>
+</tbody>
+</table>
+<p>4) 오브젝트  이름  :  potion</p>
+<table>
+<thead>
+<tr>
+<th><strong>행동</strong></th>
+<th><strong>영문명칭</strong></th>
+<th><strong>설명</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>포션  사용</td>
+<td>UsePotion()</td>
+<td>키  입력시  player의  hp를  수치만큼  증가시킨 다</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4-">4. 상태  뽑아  보기</h3>
+<p>1)  오브젝트  이름  :  player</p>
+<table>
+<thead>
+<tr>
+<th><strong>현상태</strong></th>
+<th><strong>전이상태</strong></th>
+<th><strong>전이조건</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>기본</td>
+<td>쳐내기</td>
+<td>쳐내기  키에  해당하는  입력시</td>
+</tr>
+<tr>
+<td>쳐내기</td>
+<td>기본</td>
+<td>쳐내기  시간  종료시</td>
+</tr>
+<tr>
+<td>기본</td>
+<td>사망</td>
+<td>hp가  0이하가  되면  전이</td>
+</tr>
+<tr>
+<td>사망</td>
+<td>기본</td>
+<td>사망하고  일정  시간  이후  전이</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5-">5. 플레이어  캐릭터  속성(파라미터)</h3>
+<table>
+<thead>
+<tr>
+<th><strong>속성</strong></th>
+<th><strong>영문명칭</strong></th>
+<th><strong>설명</strong></th>
+<th><strong>비고</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>최대체력</td>
+<td>maxHp</td>
+<td>플레이어의  체력이  가질  수  있는  최대치</td>
+<td>-int</td>
+</tr>
+<tr>
+<td>현재체력</td>
+<td>hp</td>
+<td>플레이어의  체력</td>
+<td>-int</td>
+</tr>
+<tr>
+<td>공격력</td>
+<td>dmg</td>
+<td>플레이어가  적에게  입히는  데미지</td>
+<td>+int</td>
+</tr>
+<tr>
+<td>이동속도</td>
+<td>moveSpeed</td>
+<td>플레이어가  이동하는  속도</td>
+<td>-float</td>
+</tr>
+<tr>
+<td>포션  개수</td>
+<td>potionCount</td>
+<td>현재  사용가능한  포션  개수</td>
+<td>-int</td>
+</tr>
+<tr>
+<td>상태</td>
+<td>state</td>
+<td>플레이어의  동작  상태  (기본,  쳐내기,  피격,  사망)</td>
+<td>+enum</td>
+</tr>
+<tr>
+<td>기준위치</td>
+<td>spawnPoint</td>
+<td>부활시  플레이어를  생성할  위치</td>
+<td>Transform</td>
+</tr>
+</tbody>
+</table>
+<h3 id="6-">6. 게임의  규칙</h3>
+<p>1) 핵심  규칙</p>
+<p>플레이어는  기본적으로  1,2,3,4스테이지  순서로  진행</p>
+<p>스테이지  완료  조건은  각  스테이지에  수문장  적을  죽이고  포탈에  들어가면  완료로  판정 승리조건(엔딩)은  모든  스테이지를  완료</p>
+<p>스테이지를  시작하면  정해진  위치에  모든  적이  생성됨</p>
+<p>적을  죽이고  일정  시간이  지나면  적이  spawnpoint에  다시  생성됨</p>
+<p>공격할  때만  공격충돌판정이  있음.</p>
+<p>마우스  좌클릭하면  공격을  할  수  있다.</p>
+<p>공격이  적에게  충돌  시  플레이어의  데미지만큼  적의  hp를  감소시킨다.</p>
+<p>플레이어/적은  hp가  0  이하가  되면  사망한다.</p>
+<p>플레이어가  사망할시  일정  시간  이후에  부활(씬  재시작)</p>
+<p>마우스  우클릭을  하면  쳐내기  상태가  된다.</p>
+<p>쳐내기  상태에서는  우클릭을  입력해도  쳐내기  상태가  시작되거나,  시간이  연장되지  않는다.</p>
+<p>2) 보조  규칙</p>
+<p>파괴가  가능한  울타리를  일정  횟수  공격할  시  파괴된다.</p>
+<h3 id="7-">7. 게임에서  사용될  공식</h3>
+<p>공격  성공  시  데미지  계산 피격된오브젝트의hp  -=  공격한오브젝트의공격력 달리기속도  제한</p>
+<p>달리기할  때  이동속도&lt;  3*기본  이동속도</p>
+<h2 id="-">요구사항 흐름도</h2>
+<h3 id="-">요구사항</h3>
+<p>메인화면, 게임화면, 엔딩화면이 있다.
+게임화면은 스테이지1,2,3,4로 나뉜다.
+메인화면에는 게임시작, 게임종료 버튼이 있다.
+게임시작 클릭시 스테이지1로 이동한다.
+카메라는 플레이어 등 뒤에 위치
+게임화면에는 적 이름, 적 HP, 플레이어 HP, 포션개수 가 표시된다.
+게임화면 중앙에는 플레이어의 모습이 3인칭으로 보여진다.
+각 스테이지에는 수문장몬스터, 포탈이 무조건 존재한다.
+수문장 몬스터를 물리치면 포탈이 생성된다.
+포탈에 들어가면 다음스테이지로 넘어간다.
+마지막 스테이지에서 수문장 몬스터를 물리치면 엔딩화면으로 이동한다.
+이동은 WASD, 화면회전은 마우스, 공격은 좌클릭, 쳐내기는 우클릭 으로 설정한다.
+플레이어 사망시 해당 스테이지를 재시작한다.
+게임종료는 플레이어가 게임종료버튼을 눌렀을 때만 가능하다.
+만약 클리어 기록이 있다면 해당스테이지까지 선택이 가능하다.
+-캐릭터 : 이동, 공격, 쳐내기, 피격, 사망, 부활, 카메라회전 구현, 포션 사용
+-적 : 이동, 공격, 플레이어 인식, 사망, 생성 구현
+-UI : 적체력UI, 적이름UI, 플레이어hpUI, 화면회전/이동설명서, 달리기설명서, 전투설명서, 
+편지창UI, 포션UI
+-오브젝트 : 편지(충돌시 편지UI출력), 포탈(충돌시 스테이지 클리어), 파괴 가능 울타리(3번 피격시 파괴 구현)
+-시스템 : 스테이지 클리어시 저장 구현</p>
+<h3 id="-">시간별흐름도</h3>
+<p><img src="./img/시간별흐름도.png" alt="시간별흐름도"></p>
+<h3 id="-">키보드흐름도</h3>
+<p><img src="./img/키보드흐름도.png" alt="키보드흐름도"></p>
+<h3 id="-">용어정리</h3>
+<p><img src="./img/용어정리.png" alt="용어정리"></p>
+<h2 id="-">스토리보드</h2>
+<p><img src="./img/스토리보드.png" alt="스토리보드"></p>
+<h1 id="-">문서</h1>
+<h2 id="-">게임 시스템 디자인 문서</h2>
+<p><a href="docs/게임시스템디자인_최재영.pdf">게임 시스템 디자인</a></p>
+<h2 id="-">시나리오 진행 문서</h2>
+<p><a href="docs/시작_시나리오.pdf">시작 시나리오</a></p>
+<h2 id="-">시나리오 업무지시 무서</h2>
+<p><a href="docs/시나리오_업무지시.pdf">시나리오 업무지시</a></p>
+<h2 id="flowchart">flowchart</h2>
+<p><a href="docs/flowchart.pptx">flowchart</a></p>
+<h2 id="-">용어정리</h2>
+<p><a href="docs/용어정리.xlsx">시나리오 업무지시</a></p>
